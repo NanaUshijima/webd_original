@@ -6,31 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="smart.css" type="text/css" media="screen and (max-width: 800px)">
-
-
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
     <title>新入生オリエンテーション</title>
-
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        $(function() {
+            $('#navToggle').click(function() { //headerに .openNav を付加・削除
+                $('header').toggleClass('openNav');
+            });
+        });
+        $(function() {
+            $('nav').click(function() { //headerに .openNav を付加・削除
+                $('header').toggleClass('openNav');
+            });
+        });
+    </script>
 </head>
+
 
 <body>
     <div id="home">
-      <div id="navToggle">
-        <div>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-        <p>Shinori<br>2017.05.20</p>
+        <header>
+            <div id="navToggle">
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#info">info</a></li>
+                    <li><a href="#stuff">stuff</a></li>
+                    <li><a href="#twitter">twitter</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <p>shinori<br>2017.05.20</p>
+
+
     </div>
-    <script src="jquery-3.1.1.min.js"></script>
-    <script>
-$(function() {
-    $('#navToggle').click(function(){//headerに .openNav を付加・削除
-        $('body').toggleClass('openNav');
-    });
-});
-</script>
+
+
+
+    <div class="contents">
+        <!-- <div class="background-home">
+      </div> -->
+        <div id="about">
+            <h1>ABOUT</h1>
+            <p class="introduction">新入生オリエンテーション（以下新オリ）とは、 入学した国際文化学部の学生に楽しんでもらう、親睦を深めてもらう、 国文ってこんなところなんだと知ってもらうイベントです。 毎年多くの国文生がこのイベントを通して、 国文のことが大好きになっています。 今年入学した皆さんは、国際文化学部ではなく国際人間科学部の グローバル文化学科所属となり先輩たちとは学部名は異なりますが、 後輩であることには変わりありません。みんなが最高の一日だったと 思えるようなそんな新オリを教員、国文の2,3回生で作っていくので
+                楽しみにしていてください。
+            </p>
+        </div>
+        <div class="background-about">
+        </div>
+        <div id="info">
+            <h1>INFO</h1>
+        </div>
+        <div class="background-info">
+        </div>
+        <div id="stuff">
+            <h1>STUFF</h1>
+            <div class="stuff-intro">
+            <div class="ibunka">
+                <img class="human" src="170226_0530-01.png" alt="">
+            </div>
+            <div class="tiiki">
+                <img class="human" src="170226_0530-01.png" alt="">
+            </div>
+            <div class="jyokomyu">
+                <img class="human" src="170226_0530-01.png" alt="">
+            </div>
+            <div class="gendai">
+                <img class="human" src="170226_0530-01.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <div class="background-stuff">
+    </div>
+    <div id="twitter">
+        <h1>TWITTER</h1>
+    </div>
+    </div>
+
+
 </body>
 
 </html>

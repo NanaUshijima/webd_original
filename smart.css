@@ -1,7 +1,15 @@
 * {}
 
+body {
+    margin: 0px;
+}
+
 #home {
-    background: rgba(240, 236, 112, 1);
+    /*background-image: url(170226_04500.jpg);
+    background: rgba(240, 236, 112, .5);*/
+    background-image: url(170226_0450.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -13,22 +21,28 @@
     text-align: center;
     color: white;
     font-size: 50px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    border: 2px solid;
+    padding: 5% 5%;
 }
 
 #navToggle {
-    /*display:none; /*通常時は非表示にしておきます*/
-    position: absolute;
+    display: none;
+    /*通常時は非表示にしておきます*/
+    position: fixed;
+    z-index: 3;
     /*bodyに対しての絶対位置指定です*/
-    left: 20px;
-    top: 30px;
+    left: 10px;
+    top: 10px;
     width: 30px;
     height: 25px;
     cursor: pointer
 }
 
-#navToggle div {
-    position: relative
-}
+
+/*#navToggle div {
+    position: relative;
+}*/
 
 
 /*spanの絶対位置指定の親にします*/
@@ -56,44 +70,89 @@
     top: 22px
 }
 
-body nav {
-    position: absolute;
+
+/*header footer*/
+
+
+/*header, footer {
+    width:100%;
+    z-index:2;
+    position:fixed;
+    background:rgba(255,255,255,.7)}
+footer {/*略/}
+/*header menu*/
+
+header {
+    z-index: 3;
+}
+
+header ul li {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+
+/*header ul li::after {
+    content: ' |'
+}
+
+header ul li:last-child::after {
+    content: ''
+}*/
+
+header ul li a {
+    color: rgba(240, 236, 112, 1);
+    display: block;
+    margin: 15px 0px;
+    padding: 0px 5px;
+    text-decoration: none;
+    font-size: 50px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+header nav {
+    position: fixed;
+    display: flex;
     /*bodyに対しての絶対位置*/
     right: 0;
-    top: -300px;
+    top: -100vh;
     /*通常時はビュー外*/
-    background: rgba(255, 255, 255, .7);
-    width: 50%;
-    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 100vh;
     -webkit-transition: .5s ease-in-out;
     /*transitionで動きを*/
     -moz-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    text-align: left
+    text-align: center;
 }
 
-body ul {
+
+/*
+header ul {
     margin: 0
 }
 
-body ul li {
+header ul li {
     display: block;
     margin: 0;
     border-bottom: dotted 1px #fff;
     line-height: 3
 }
 
-body ul li a {
+header ul li a {
     display: block
 }
 
-body ul li::after {
+header ul li::after {
     content: ''
 }
 
-body ul li:last-child {
+header ul li:last-child {
     border-bottom: none
-}
+}*/
 
 
 /* Toggle(Button) */
@@ -119,6 +178,7 @@ body ul li:last-child {
 
 .openNav #navToggle span:nth-child(1) {
     top: 11px;
+    border-color: rgba(240, 236, 112, 1);
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     transform: rotate(-45deg)
@@ -129,6 +189,7 @@ body ul li:last-child {
 
 .openNav #navToggle span:nth-child(2), .openNav #navToggle span:nth-child(3) {
     top: 11px;
+    border-color: rgba(240, 236, 112, 1);
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     transform: rotate(45deg)
@@ -141,10 +202,125 @@ body ul li:last-child {
 /*.openNavが付いた要素の中のnavを 縦方向に351px移動（=表示される）*/
 
 .openNav nav {
-    -moz-transform: translateY(351px);
-    -webkit-transform: translateY(351px);
-    transform: translateY(351px)
+    -moz-transform: translateY(100vh);
+    -webkit-transform: translateY(100vh);
+    transform: translateY(100vh);
+}
+
+.contents {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#about, #info, #stuff, #twitter {
+    padding: 2% 10%;
 }
 
 
+/*以下背景色について*/
+
+
+/*背景の斜めのつなぎを作る*/
+
+.background-home {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, rgb(240, 236, 112) 50%, rgb(31, 48, 137) 50%, rgb(31, 48, 137));
+}
+
+#about {
+    background-color: rgb(31, 48, 137);
+}
+
+.background-about {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, rgb(31, 48, 137) 50%, rgb(246, 150, 150) 50%, rgb(246, 150, 150));
+}
+
+#info {
+    background-color: rgb(246, 150, 150);
+}
+
+.background-info {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, rgb(246, 150, 150) 50%, rgb(115, 240, 227) 50%, rgb(115, 240, 227));
+}
+
+#stuff {
+    background-color: rgb(115, 240, 227);
+}
+
+
+
+.stuff-intro{
+  display: flex;
+  flex-wrap: wrap;
+  /*flex-direction: row;*/
+  width: 100%;
+
+  margin: 0px;
+  justify-content: center;
+  /*justify-content: space-around;*/
+}
+
+.ibunka, .tiiki, .jyokomyu, .gendai {
+  width: 40%;
+  /*background-color: white;*/
+  margin: 2%;
+  text-align: center;
+
+}
+
+.ibunka:hover, .tiiki:hover, .jyokomyu:hover, .gendai:hover {
+  /*background-color: red;*/
+  width:45%;
+}
+
+img.human{
+    width: 80%;
+    height: 80%;
+    margin-top: 5%;
+}
+
+.background-stuff {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, rgb(115, 240, 227) 50%, rgb(240, 236, 112) 50%, rgb(240, 236, 112));
+}
+
+#twitter {
+    background-color: rgb(240, 236, 112);
+}
+
+#about h1 {
+    padding-top: 50px;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 10px 35%;
+    text-align: center;
+    border-bottom: 2px solid;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: white;
+}
+
+#about p {
+    float: right;
+    width: 300px;
+    height: 300px;
+    color: white;
+    font-size: 12px;
+    background-color: red;
+    border-radius: 50%;
+    font-family: "Noto Sans Japanese";
 }
