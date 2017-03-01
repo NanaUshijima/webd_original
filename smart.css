@@ -5,7 +5,6 @@ body {
 }
 
 #home {
-    background-image: url(170226_0450.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -34,7 +33,7 @@ body {
     top: 10px;
     width: 30px;
     height: 25px;
-    cursor: pointer
+    cursor: pointer;
 }
 
 
@@ -81,7 +80,7 @@ footer {/*略/}
 /*header menu*/
 
 header {
-    z-index: 3;
+    z-index: 100;
 }
 
 header ul li {
@@ -213,7 +212,7 @@ header ul li:last-child {
     flex-direction: column;
 }
 
-#about, #info, #stuff, #twitter {
+#about, #info, #staff, #twitter {
     padding: 2% 10%;
 }
 
@@ -328,42 +327,46 @@ p.introduction {
 
 #info h3 {
     color: white;
-    /*フォントにグーグルフォントのニコモジフォントを入れる。*/
     font-size: 15spx;
-    font-family: "Mplus 1p";
+    /*font-family: "Mplus 1p";*/
+    font-family: "Sawarabi Mincho";
     margin: 10px 0px 0px 0px;
 }
 
 p.when {
     color: white;
-    font-size: 40px;
+    font-size: 35px;
     font-family: "Mplus 1p";
-    font-weight: bold;
+    /*font-weight: bold;*/
     text-align: center;
+    margin: 20px 0 10px 0;
 }
 
 p.place {
     color: white;
     font-size: 30px;
     font-family: "Mplus 1p";
-    font-weight: bold;
+    /*font-weight: bold;*/
     text-align: center;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
+    margin: 20px 0 0 0;
 }
 
 p.place2 {
   color: white;
   font-size: 20px;
   font-family: "Mplus 1p";
-  font-weight: bold;
+  /*font-weight: bold;*/
   text-align: center;
-  margin-top: 10px;
+  margin: 0 0 10px 0;
 }
 
 #info li {
     width:70%;
     color: white;
-    font-size: 20px;;
+    font-size: 13px;
+    list-style: none;
+
     font-family: "Mplus 1p";
     font-weight: bold;
 }
@@ -375,40 +378,75 @@ p.place2 {
     background-image: linear-gradient(-200deg, #d8757d 50%, #65c1d8 50%, #65c1d8);
 }
 
-#stuff {
+#staff {
     /*background-color: rgb(115, 240, 227);*/
     background-color: #65c1d8;
 }
 
-.stuff-intro {
+.staff-intro {
     display: flex;
     flex-wrap: wrap;
-    /*flex-direction: row;*/
     width: 100%;
     margin: 0px;
     justify-content: center;
-    /*justify-content: space-around;*/
+    margin-top: 70px;
+    margin-bottom: 50px;
 }
 
 .ibunka, .tiiki, .jyokomyu, .gendai {
-    width: 40%;
+    width: 44%;
     /*background-color: white;*/
-    margin: 2%;
+    margin: 1%;
+    border: solid 3px;
     text-align: center;
+    border-color: white;
+    border-radius: 10%;
 }
 
-.ibunka:hover, .tiiki:hover, .jyokomyu:hover, .gendai:hover {
-    /*background-color: red;*/
-    width: 45%;
+.ibunka{
+  /*background-color: #d3637d;*/
+  background-color: #20b3d8;
 }
+
+.tiiki{
+  /*background-color: #db9d6d;*/
+  background-color: #20b3d8;
+}
+
+.jyokomyu{
+  /*background-color: #3d4799;*/
+  background-color: #20b3d8;
+}
+
+.gendai{
+  /*background-color: #d8d464;*/
+  background-color: #20b3d8;
+}
+
+/*アニメーション*/
+/*.ibunka:hover, .tiiki:hover, .jyokomyu:hover, .gendai:hover {
+    width: 45%;
+}*/
 
 img.human {
     width: 80%;
-    height: 80%;
     margin-top: 5%;
 }
 
-.background-stuff {
+
+
+ .staff-intro a{
+  display: block;
+  text-decoration: none;
+  font-size: 180%;
+  color: white;
+  font-family: "Nico Moji";
+  margin: 10px 0;
+}
+
+
+
+.background-staff {
     position: relative;
     width: 100%;
     height: 200px;
@@ -423,4 +461,10 @@ img.human {
 
 #twitter h1 {
     margin-bottom: 20%;
+}
+
+/*twitter中央寄せ*/
+.twitter-box{
+  display: flex;
+  justify-content: center;
 }
