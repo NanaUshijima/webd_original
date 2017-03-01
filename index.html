@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- スマートフォン用css読み込み -->
     <link rel="stylesheet" href="smart.css" type="text/css" media="screen and (max-width: 800px)">
+    <!-- フォント読み込み -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <title>新入生オリエンテーション</title>
+    <!-- jQuery読み込み -->
     <script src="jquery-3.1.1.min.js"></script>
     <script>
         $(function() {
@@ -20,6 +25,20 @@
             $('nav').click(function() { //headerに .openNav を付加・削除
                 $('header').toggleClass('openNav');
             });
+        });
+    </script>
+    <!-- モーダルウィンドウファイル読み込み -->
+
+    <script src="iziModal.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="iziModal.min.css">
+
+    <script>
+        window.onload(function() {
+          $(document).on('click', '.open-default', function(event) {
+              event.preventDefault();
+              $('#modal-default').iziModal('open');
+          });
+          $('#modal-default').iziModal();
         });
     </script>
 </head>
@@ -58,41 +77,84 @@
       </div> -->
         <div id="about">
             <h1>ABOUT</h1>
-            <p class="introduction">新入生オリエンテーション（以下新オリ）とは、 入学した国際文化学部の学生に楽しんでもらう、親睦を深めてもらう、 国文ってこんなところなんだと知ってもらうイベントです。 毎年多くの国文生がこのイベントを通して、 国文のことが大好きになっています。 今年入学した皆さんは、国際文化学部ではなく国際人間科学部の グローバル文化学科所属となり先輩たちとは学部名は異なりますが、 後輩であることには変わりありません。みんなが最高の一日だったと 思えるようなそんな新オリを教員、国文の2,3回生で作っていくので
-                楽しみにしていてください。
-            </p>
+            <div class="about_content">
+                <p class="speech">What's<br><span>S</span>hinori?</p>
+                <p class="introduction">新入生オリエンテーション（以下新オリ）とは、 入学した国際文化学部の学生に楽しんでもらう、親睦を深めてもらう、 国文ってこんなところなんだと知ってもらうイベントです。 毎年多くの国文生がこのイベントを通して、 <strong>国文のことを大好き</strong>になっています。 今年入学した皆さんは、国際文化学部ではなく国際人間科学部の グローバル文化学科所属となり先輩たちとは学部名は異なりますが、 後輩であることには変わりありません。みんなが<strong>最高の一日だった</strong>と思えるようなそんな新オリを教員、国文の2,3回生で作っていくので
+                    楽しみにしていてください。
+                </p>
+            </div>
         </div>
         <div class="background-about">
         </div>
         <div id="info">
             <h1>INFO</h1>
+            <div class="info_content1">
+                <h3>日時</h3>
+                <p class="when">5月20日<br>9:00-20:00</p>
+            </div>
+            <div class="info_content2">
+                <h3>場所</h3>
+                <p class="place">国文キャンパス</p>
+                <p class="place2">(鶴甲台第一キャンパス)</p>
+            </div>
+            <div class="info_content3">
+                <h3>持ち物・服装</h3>
+                <p>
+                    <li>体育館シューズ</li>
+                    <li>動きやすい普段着</li>
+                    <li>昼食</li>
+                    <li>筆記用具</li>
+                  </p>
+
+
+            </div>
         </div>
         <div class="background-info">
         </div>
         <div id="stuff">
             <h1>STUFF</h1>
             <div class="stuff-intro">
-            <div class="ibunka">
-                <img class="human" src="170226_0530-01.png" alt="">
+
+                  <button class="ibunka open-default button">
+                    <img class="human" src="170226_0530-01.png" alt="">
+                </button>
+                <div id="modal-default">
+                    <div class="close">
+                        <a data-izimodal-close="">×</a>
+                    </div>
+                    <p>このモーダルウィンドウはデフォルト設定です</p>
+                </div>
+                <div class="tiiki">
+                    <img class="human" src="170226_0530-01.png" alt="">
+                </div>
+                <div class="jyokomyu">
+                    <img class="human" src="170226_0530-01.png" alt="">
+                </div>
+                <div class="gendai">
+                    <img class="human" src="170226_0530-01.png" alt="">
+                </div>
             </div>
-            <div class="tiiki">
-                <img class="human" src="170226_0530-01.png" alt="">
-            </div>
-            <div class="jyokomyu">
-                <img class="human" src="170226_0530-01.png" alt="">
-            </div>
-            <div class="gendai">
-                <img class="human" src="170226_0530-01.png" alt="">
-            </div>
+
+        </div>
+        <div class="background-stuff">
+        </div>
+        <div id="twitter">
+            <h1>TWITTER</h1>
+            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=%20%E7%A5%9E%E5%A4%A7%E3%80%80%E5%9B%BD%E6%96%87" data-widget-id="835745564700508160"> 神大　国文に関するツイート</a>
+            <script>
+                ! function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + "://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "twitter-wjs");
+            </script>
         </div>
 
-    </div>
-    <div class="background-stuff">
-    </div>
-    <div id="twitter">
-        <h1>TWITTER</h1>
-    </div>
-    </div>
 
 
 </body>

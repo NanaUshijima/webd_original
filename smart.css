@@ -5,8 +5,6 @@ body {
 }
 
 #home {
-    /*background-image: url(170226_04500.jpg);
-    background: rgba(240, 236, 112, .5);*/
     background-image: url(170226_0450.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -232,79 +230,6 @@ header ul li:last-child {
     background-image: linear-gradient(-200deg, rgb(240, 236, 112) 50%, rgb(31, 48, 137) 50%, rgb(31, 48, 137));
 }
 
-#about {
-    background-color: rgb(31, 48, 137);
-}
-
-.background-about {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    background-image: linear-gradient(-200deg, rgb(31, 48, 137) 50%, rgb(246, 150, 150) 50%, rgb(246, 150, 150));
-}
-
-#info {
-    background-color: rgb(246, 150, 150);
-}
-
-.background-info {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    background-image: linear-gradient(-200deg, rgb(246, 150, 150) 50%, rgb(115, 240, 227) 50%, rgb(115, 240, 227));
-}
-
-#stuff {
-    background-color: rgb(115, 240, 227);
-}
-
-
-
-.stuff-intro{
-  display: flex;
-  flex-wrap: wrap;
-  /*flex-direction: row;*/
-  width: 100%;
-
-  margin: 0px;
-  justify-content: center;
-  /*justify-content: space-around;*/
-}
-
-.ibunka, .tiiki, .jyokomyu, .gendai {
-  width: 40%;
-  /*background-color: white;*/
-  margin: 2%;
-  text-align: center;
-
-}
-
-.ibunka:hover, .tiiki:hover, .jyokomyu:hover, .gendai:hover {
-  /*background-color: red;*/
-  width:45%;
-}
-
-img.human{
-    width: 80%;
-    height: 80%;
-    margin-top: 5%;
-}
-
-.background-stuff {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    background-image: linear-gradient(-200deg, rgb(115, 240, 227) 50%, rgb(240, 236, 112) 50%, rgb(240, 236, 112));
-}
-
-#twitter {
-    background-color: rgb(240, 236, 112);
-}
-
-#about h1 {
-    padding-top: 50px;
-}
-
 h1 {
     font-size: 30px;
     margin: 10px 35%;
@@ -314,13 +239,188 @@ h1 {
     color: white;
 }
 
-#about p {
-    float: right;
-    width: 300px;
+#about {
+    /*background-color: rgb(31, 48, 137);*/
+    background-color: #3d4799;
+}
+
+.about_content {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+
+#about h1 {
+    padding-top: 50px;
+}
+
+p.speech {
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    /*border: 2px dotted;
+  border-color: white;
+  padding: 0px;*/
+    font-family: 'Pacifico', cursive;
+    -webkit-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    line-height: 110%;
+}
+
+p.speech span {
+    color: red;
+}
+
+p.introduction {
+    width: 70%;
     height: 300px;
+    text-align: left;
+    line-height: 180%;
     color: white;
     font-size: 12px;
-    background-color: red;
-    border-radius: 50%;
     font-family: "Noto Sans Japanese";
+}
+
+
+.background-about {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, #3d4799 50%, #d8757d 50%, #d8757d);
+}
+
+#info {
+    /*background-color: rgb(246, 150, 150);*/
+    background-color: #d8757d;
+}
+
+.info_content1 {
+    width: 100%;
+    display: flex;
+    /*justify-content: flex-start;*/
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.info_content2 {
+    width: 100%;
+    display: flex;
+    /*justify-content: flex-end;*/
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.info_content3 {
+    width: 100%;
+    display: flex;
+    /*justify-content: flex-start;*/
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+#info h3 {
+    color: white;
+    /*フォントにグーグルフォントのニコモジフォントを入れる。*/
+    font-size: 15spx;
+    font-family: "Mplus 1p";
+    margin: 10px 0px 0px 0px;
+}
+
+p.when {
+    color: white;
+    font-size: 40px;
+    font-family: "Mplus 1p";
+    font-weight: bold;
+    text-align: center;
+}
+
+p.place {
+    color: white;
+    font-size: 30px;
+    font-family: "Mplus 1p";
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p.place2 {
+  color: white;
+  font-size: 20px;
+  font-family: "Mplus 1p";
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#info li {
+    width:70%;
+    color: white;
+    font-size: 20px;;
+    font-family: "Mplus 1p";
+    font-weight: bold;
+}
+
+.background-info {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, #d8757d 50%, #65c1d8 50%, #65c1d8);
+}
+
+#stuff {
+    /*background-color: rgb(115, 240, 227);*/
+    background-color: #65c1d8;
+}
+
+.stuff-intro {
+    display: flex;
+    flex-wrap: wrap;
+    /*flex-direction: row;*/
+    width: 100%;
+    margin: 0px;
+    justify-content: center;
+    /*justify-content: space-around;*/
+}
+
+.ibunka, .tiiki, .jyokomyu, .gendai {
+    width: 40%;
+    /*background-color: white;*/
+    margin: 2%;
+    text-align: center;
+}
+
+.ibunka:hover, .tiiki:hover, .jyokomyu:hover, .gendai:hover {
+    /*background-color: red;*/
+    width: 45%;
+}
+
+img.human {
+    width: 80%;
+    height: 80%;
+    margin-top: 5%;
+}
+
+.background-stuff {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, #65c1d8 50%, #d8d465 50%, #d8d465);
+}
+
+#twitter {
+    /*background-color: rgb(240, 236, 112);*/
+    background-color: #d8d465;
+    padding-bottom: 30%;
+}
+
+#twitter h1 {
+    margin-bottom: 20%;
 }
