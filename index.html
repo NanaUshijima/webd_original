@@ -14,7 +14,9 @@
     <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
-    <title>新入生オリエンテーション</title>
+
+    <!-- FontAwesomeの読み込み -->
+    <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
     <!-- CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.css" rel="stylesheet" type="text/css" media="all" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal-default-theme.min.css" rel="stylesheet" type="text/css" media="all" />
@@ -30,12 +32,12 @@
           $('#modal-default').iziModal();
         });
     </script> -->
+    <title>新入生オリエンテーション</title>
 </head>
 
 
 <body>
     <div id="home">
-
         <header>
             <div id="navToggle">
                 <div>
@@ -54,9 +56,10 @@
                 </ul>
             </nav>
         </header>
-
-        <p>shinori<br>2017.05.20</p>
-
+        <div class="appear home_box">
+        <p class="word1 appear">shinori</p>
+        <p class="word2 appear">2017.05.20</p>
+        </div>
 
     </div>
 
@@ -79,15 +82,14 @@
         <div id="info">
             <h1>INFO</h1>
             <div class="info_content1">
-                <h3>日時</h3>
+                <i class="fa fa-calendar-o" aria-hidden="true"></i>
                 <p class="when">5月20日<br>9:00-20:00</p>
             </div>
             <div class="info_content2">
-                <h3>場所</h3>
-                <p class="place">国文キャンパス</p>
-                <p class="place2">(鶴甲台第一キャンパス)</p>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <p class="place">国文キャンパス<br><span>(鶴甲台第一キャンパス)</span></p>
             </div>
-            <div class="info_content3">
+            <div class="bag">
                 <h3>持ち物・服装</h3>
                 <p>
                     <li>体育館シューズ</li>
@@ -268,15 +270,18 @@
         </script>
 
 
-      // 背景のスライドショー
-      <script src="jquery.backstretch.min.js"></script>
-      <script>
-        $('#home').backstretch([
-          "bgimg01.jpg",
-          "bgimg02.jpg",
-          "bgimg03.jpg"
-        ], {duration: 3000, fade: 2000});
-      </script>
+        <!-- 背景のスライドショー -->
+        <script src="jquery.backstretch.min.js"></script>
+        <script>
+            $('#home').backstretch([
+                "bgimg01.jpg",
+                "bgimg02.jpg",
+                "bgimg03.jpg"
+            ], {
+                duration: 3000,
+                fade: 2000
+            });
+        </script>
 
         <!-- javascript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.js" type="text/javascript"></script>

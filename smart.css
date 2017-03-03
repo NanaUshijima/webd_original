@@ -1,5 +1,13 @@
 * {}
 
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('font-awesome-4.7.0/fonts/fontawesome-webfont.eot?v=4.4.0');
+    src: url('font-awesome-4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('font-awesome-4.7.0/fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('font-awesome-4.7.0/fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('font-awesome-4.7.0/fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0px;
 }
@@ -14,14 +22,53 @@ body {
     align-items: center;
 }
 
+.home_box {
+    border: 2px solid;
+    padding: 15px 20px;
+    border-color: white;
+    overflow: hidden;
+}
+
+.appear {
+    animation: show 3s both;
+}
+
 #home p {
     text-align: center;
     color: white;
     font-size: 50px;
     font-family: 'Ubuntu Condensed', sans-serif;
-    border: 2px solid;
-    padding: 5% 5%;
+    margin: 0;
+    overflow: hidden;
 }
+
+.word1 {
+  animation-delay: 2s;
+}
+
+.word2 {
+  animation-delay: 4s;
+}
+
+@keyframes show {
+    0% {
+        -webkit-transform: translate(0, 200px);
+        -ms-transform: translate(0, 200px);
+        transform: translate(0, 200px);
+        opacity: 0;
+    }
+
+    70%{
+      opacity: 0.3;
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
 
 #navToggle {
     display: none;
@@ -80,7 +127,7 @@ footer {/*略/}
 /*header menu*/
 
 header {
-    z-index: 100;
+    z-index: 4;
 }
 
 header ul li {
@@ -214,6 +261,8 @@ header ul li:last-child {
 
 #about, #info, #staff, #twitter {
     padding: 2% 10%;
+    z-index: -2;
+
 }
 
 
@@ -261,14 +310,12 @@ p.speech {
     text-align: center;
     font-size: 80px;
     color: white;
-    /*border: 2px dotted;
-  border-color: white;
-  padding: 0px;*/
     font-family: 'Pacifico', cursive;
     -webkit-transform: rotate(-20deg);
     -ms-transform: rotate(-20deg);
     transform: rotate(-20deg);
     line-height: 110%;
+    z-index: -1;
 }
 
 p.speech span {
@@ -285,9 +332,7 @@ p.introduction {
     font-family: "Noto Sans Japanese";
 }
 
-
 .background-about {
-    position: relative;
     width: 100%;
     height: 200px;
     background-image: linear-gradient(-200deg, #3d4799 50%, #d8757d 50%, #d8757d);
@@ -298,81 +343,107 @@ p.introduction {
     background-color: #d8757d;
 }
 
+
+/*#info i::before{
+  color: white;
+  flex: 1;
+}*/
+
 .info_content1 {
     width: 100%;
     display: flex;
-    /*justify-content: flex-start;*/
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 50px;
 }
 
 .info_content2 {
     width: 100%;
     display: flex;
-    /*justify-content: flex-end;*/
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-top: 40px;
+    flex-direction: row;
+    margin-top: 10px;
 }
 
-.info_content3 {
+.bag {
     width: 100%;
     display: flex;
-    /*justify-content: flex-start;*/
     align-items: center;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 80px;
+    background-color: #413f3f;
+    border-radius: 5%;
+    position: relative;
+    z-index: -1;
+
 }
 
-#info h3 {
+.bag::before{
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: #413f3f solid 20px;
+  top: -70px;
+
+}
+
+#info i {
     color: white;
-    font-size: 15spx;
-    /*font-family: "Mplus 1p";*/
-    font-family: "Sawarabi Mincho";
-    margin: 10px 0px 0px 0px;
+    font-size: 20px;
+    text-align: center;
+    flex: 1;
 }
 
 p.when {
     color: white;
     font-size: 35px;
-    font-family: "Mplus 1p";
-    /*font-weight: bold;*/
-    text-align: center;
-    margin: 20px 0 10px 0;
+    font-family: "Noto Sans Japanese";
+    text-align: left;
+    padding: 0px;
+    margin-left: 10px;
+    /*margin: 20px 10px 20px 10px;*/
+    flex: 3;
 }
 
 p.place {
     color: white;
     font-size: 30px;
-    font-family: "Mplus 1p";
-    /*font-weight: bold;*/
-    text-align: center;
-    /*margin-bottom: 10px;*/
-    margin: 20px 0 0 0;
+    font-family: "Noto Sans Japanese";
+    text-align: left;
+    margin-left: 10px;
+    /*margin: 20px 10px 20px 10px;*/
+    flex: 3;
 }
 
-p.place2 {
-  color: white;
-  font-size: 20px;
-  font-family: "Mplus 1p";
-  /*font-weight: bold;*/
-  text-align: center;
-  margin: 0 0 10px 0;
+p.place span {
+    font-size: 17px;
+    color: white;
+    font-family: "Noto Sans Japanese";
+}
+
+#info h3 {
+    color: white;
+    font-size: 15px;
+    font-family: "Sawarabi Mincho";
+    margin: 10px 0px 0px 0px;
+    z-index: 2;
 }
 
 #info li {
-    width:70%;
+    width: 70%;
     color: white;
     font-size: 13px;
     list-style: none;
-
     font-family: "Mplus 1p";
     font-weight: bold;
+    z-index: 2;
 }
 
 .background-info {
-    position: relative;
     width: 100%;
     height: 200px;
     background-image: linear-gradient(-200deg, #d8757d 50%, #65c1d8 50%, #65c1d8);
@@ -403,27 +474,30 @@ p.place2 {
     border-radius: 10%;
 }
 
-.ibunka{
-  /*background-color: #d3637d;*/
-  background-color: #20b3d8;
+.ibunka {
+    /*background-color: #d3637d;*/
+    background-color: #20b3d8;
 }
 
-.tiiki{
-  /*background-color: #db9d6d;*/
-  background-color: #20b3d8;
+.tiiki {
+    /*background-color: #db9d6d;*/
+    background-color: #20b3d8;
 }
 
-.jyokomyu{
-  /*background-color: #3d4799;*/
-  background-color: #20b3d8;
+.jyokomyu {
+    /*background-color: #3d4799;*/
+    background-color: #20b3d8;
 }
 
-.gendai{
-  /*background-color: #d8d464;*/
-  background-color: #20b3d8;
+.gendai {
+    /*background-color: #d8d464;*/
+    background-color: #20b3d8;
 }
+
 
 /*アニメーション*/
+
+
 /*.ibunka:hover, .tiiki:hover, .jyokomyu:hover, .gendai:hover {
     width: 45%;
 }*/
@@ -433,21 +507,16 @@ img.human {
     margin-top: 5%;
 }
 
-
-
- .staff-intro a{
-  display: block;
-  text-decoration: none;
-  font-size: 180%;
-  color: white;
-  font-family: "Nico Moji";
-  margin: 10px 0;
+.staff-intro a {
+    display: block;
+    text-decoration: none;
+    font-size: 180%;
+    color: white;
+    font-family: "Nico Moji";
+    margin: 10px 0;
 }
 
-
-
 .background-staff {
-    position: relative;
     width: 100%;
     height: 200px;
     background-image: linear-gradient(-200deg, #65c1d8 50%, #d8d465 50%, #d8d465);
@@ -463,8 +532,10 @@ img.human {
     margin-bottom: 20%;
 }
 
+
 /*twitter中央寄せ*/
-.twitter-box{
-  display: flex;
-  justify-content: center;
+
+.twitter-box {
+    display: flex;
+    justify-content: center;
 }
