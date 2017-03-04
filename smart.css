@@ -43,11 +43,11 @@ body {
 }
 
 .word1 {
-  animation-delay: 2s;
+    animation-delay: 2s;
 }
 
 .word2 {
-  animation-delay: 4s;
+    animation-delay: 4s;
 }
 
 @keyframes show {
@@ -57,9 +57,8 @@ body {
         transform: translate(0, 200px);
         opacity: 0;
     }
-
-    70%{
-      opacity: 0.3;
+    70% {
+        opacity: 0.3;
     }
     100% {
         -webkit-transform: translate(0, 0);
@@ -68,7 +67,6 @@ body {
         opacity: 1;
     }
 }
-
 
 #navToggle {
     display: none;
@@ -257,12 +255,12 @@ header ul li:last-child {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    z-index: -5;
 }
 
 #about, #info, #staff, #twitter {
     padding: 2% 10%;
     z-index: -2;
-
 }
 
 
@@ -368,27 +366,30 @@ p.introduction {
 }
 
 .bag {
-    width: 100%;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
     margin-top: 80px;
+    padding-bottom: 10px;
     background-color: #413f3f;
     border-radius: 5%;
     position: relative;
     z-index: -1;
-
+    flex-direction: column;
+    align-items: center;
 }
 
-.bag::before{
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: #413f3f solid 20px;
-  top: -70px;
-
+.bag::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: #413f3f solid 20px;
+    top: -70px;
+    left: 50%;
+    -webkit-transform: translate(-70px, 0);
+    -ms-transform: translate(-70px, 0);
+    transform: translate(-70px, 0);
 }
 
 #info i {
@@ -427,20 +428,30 @@ p.place span {
 
 #info h3 {
     color: white;
-    font-size: 15px;
-    font-family: "Sawarabi Mincho";
+    font-size: 13px;
+    font-family: "Noto Sans Japanese";
+    font-weight: 100;
     margin: 10px 0px 0px 0px;
     z-index: 2;
+    width: 100%;
+    text-align: center;
 }
 
-#info li {
-    width: 70%;
+#info ul {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+#info ul li {
+    width: 50%;
+    padding: 10px 0;
     color: white;
-    font-size: 13px;
-    list-style: none;
-    font-family: "Mplus 1p";
-    font-weight: bold;
+    font-size: 20px;
+    font-family: "Noto Sans Japanese";
     z-index: 2;
+
 }
 
 .background-info {
@@ -466,7 +477,6 @@ p.place span {
 
 .ibunka, .tiiki, .jyokomyu, .gendai {
     width: 44%;
-    /*background-color: white;*/
     margin: 1%;
     border: solid 3px;
     text-align: center;
@@ -475,32 +485,21 @@ p.place span {
 }
 
 .ibunka {
-    /*background-color: #d3637d;*/
     background-color: #20b3d8;
 }
 
 .tiiki {
-    /*background-color: #db9d6d;*/
     background-color: #20b3d8;
 }
 
 .jyokomyu {
-    /*background-color: #3d4799;*/
     background-color: #20b3d8;
 }
 
 .gendai {
-    /*background-color: #d8d464;*/
     background-color: #20b3d8;
 }
 
-
-/*アニメーション*/
-
-
-/*.ibunka:hover, .tiiki:hover, .jyokomyu:hover, .gendai:hover {
-    width: 45%;
-}*/
 
 img.human {
     width: 80%;
@@ -513,7 +512,11 @@ img.human {
     font-size: 180%;
     color: white;
     font-family: "Nico Moji";
-    margin: 10px 0;
+    margin-bottom: 25px;
+}
+
+.staff-intro p{
+  margin: 10px 0;
 }
 
 .background-staff {
@@ -523,7 +526,6 @@ img.human {
 }
 
 #twitter {
-    /*background-color: rgb(240, 236, 112);*/
     background-color: #d8d465;
     padding-bottom: 30%;
 }
