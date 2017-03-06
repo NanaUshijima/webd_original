@@ -61,7 +61,7 @@
             <h1 class="list-mv">ABOUT</h1>
             <div class="about_content">
                 <p class="speech list-mv">What's<br><span>S</span>hinori?</p>
-                <p class="introduction">新入生オリエンテーション（以下新オリ）とは、 入学した国際文化学部の学生に楽しんでもらう、親睦を深めてもらう、 国文ってこんなところなんだと知ってもらうイベントです。 毎年多くの国文生がこのイベントを通して、 <strong>国文のことを大好き</strong>になっています。 今年入学した皆さんは、国際文化学部ではなく国際人間科学部の グローバル文化学科所属となり先輩たちとは学部名は異なりますが、 後輩であることには変わりありません。みんなが<strong>最高の一日だった</strong>と思えるようなそんな新オリを教員、国文の2,3回生で作っていくので
+                <p class="introduction list-mv">新入生オリエンテーション（以下新オリ）とは、 入学した国際文化学部の学生に楽しんでもらう、親睦を深めてもらう、 国文ってこんなところなんだと知ってもらうイベントです。 毎年多くの国文生がこのイベントを通して、 <strong>国文のことを大好き</strong>になっています。 今年入学した皆さんは、国際文化学部ではなく国際人間科学部の グローバル文化学科所属となり先輩たちとは学部名は異なりますが、 後輩であることには変わりありません。みんなが<strong>最高の一日だった</strong>と思えるようなそんな新オリを教員、国文の2,3回生で作っていくので
                     楽しみにしていてください。
                 </p>
             </div>
@@ -69,16 +69,16 @@
         <div class="background-about">
         </div>
         <div id="info" class="list">
-            <h1>INFO</h1>
-            <div class="info_content1">
+            <h1 class="list-mv">INFO</h1>
+            <div class="info_content1 list-mv">
                 <i class="fa fa-calendar-o" aria-hidden="true"></i>
                 <p class="when">5月20日<br>9:00-20:00</p>
             </div>
-            <div class="info_content2">
+            <div class="info_content2 list-mv">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <p class="place">国文キャンパス<br><span>(鶴甲台第一キャンパス)</span></p>
             </div>
-            <div class="bag">
+            <div class="bag list-mv">
                 <h3>持ち物・服装</h3>
                 <ul>
                     <li>体育館<br>シューズ</li>
@@ -93,8 +93,8 @@
         <div class="background-info">
         </div>
         <div id="staff" class="list">
-            <h1>STAFF</h1>
-            <div class="staff-intro">
+            <h1 class="list-mv">STAFF</h1>
+            <div class="staff-intro list-mv">
 
 
                 <div class="ibunka">
@@ -284,8 +284,8 @@
         <div class="background-staff">
         </div>
         <div id="twitter" class="list">
-            <h1>TWITTER</img></h1>
-            <div class="twitter-box">
+            <h1 class="list-mv">TWITTER</img></h1>
+            <div class="twitter-box list-mv">
                 <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=%20%E7%A5%9E%E5%A4%A7%E3%80%80%E5%9B%BD%E6%96%87" data-widget-id="835745564700508160"> 神大　国文に関するツイート</a>
                 <script>
                     ! function(d, s, id) {
@@ -347,10 +347,8 @@
         $('.list-mv').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
             if (isInView) {
                 $(this).stop().addClass('mv');
-                console.log('test1');
             } else {
                 $(this).stop().removeClass('mv');
-                console.log('test2');
             }
         });
     });

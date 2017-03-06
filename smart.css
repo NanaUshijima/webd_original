@@ -19,6 +19,7 @@ body {
 	opacity: 0;
 	transform: translate(0,60px);
 	-webkit-transform: translate(0,60px);
+  transition: .8s;
 }
 .mv {
 	opacity: 1.0;
