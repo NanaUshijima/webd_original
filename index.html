@@ -20,24 +20,14 @@
     <!-- CSS モーダルウィンドウ-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.css" rel="stylesheet" type="text/css" media="all" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal-default-theme.min.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- <script src="iziModal.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="iziModal.min.css">
 
-    <script>
-        window.onload(function() {
-          $(document).on('click', '.open-default', function(event) {
-              event.preventDefault();
-              $('#modal-default').iziModal('open');
-          });
-          $('#modal-default').iziModal();
-        });
-    </script> -->
     <title>新入生オリエンテーション</title>
 </head>
 
 
 <body>
     <div id="home">
+      <!-- ハンバーガメニュー部分 -->
         <header>
             <div id="navToggle">
                 <div>
@@ -66,12 +56,11 @@
 
 
     <div class="contents">
-        <!-- <div class="background-home">
-      </div> -->
-        <div id="about">
-            <h1>ABOUT</h1>
+
+        <div id="about" class="list">
+            <h1 class="list-mv">ABOUT</h1>
             <div class="about_content">
-                <p class="speech">What's<br><span>S</span>hinori?</p>
+                <p class="speech list-mv">What's<br><span>S</span>hinori?</p>
                 <p class="introduction">新入生オリエンテーション（以下新オリ）とは、 入学した国際文化学部の学生に楽しんでもらう、親睦を深めてもらう、 国文ってこんなところなんだと知ってもらうイベントです。 毎年多くの国文生がこのイベントを通して、 <strong>国文のことを大好き</strong>になっています。 今年入学した皆さんは、国際文化学部ではなく国際人間科学部の グローバル文化学科所属となり先輩たちとは学部名は異なりますが、 後輩であることには変わりありません。みんなが<strong>最高の一日だった</strong>と思えるようなそんな新オリを教員、国文の2,3回生で作っていくので
                     楽しみにしていてください。
                 </p>
@@ -79,7 +68,7 @@
         </div>
         <div class="background-about">
         </div>
-        <div id="info">
+        <div id="info" class="list">
             <h1>INFO</h1>
             <div class="info_content1">
                 <i class="fa fa-calendar-o" aria-hidden="true"></i>
@@ -103,7 +92,7 @@
         </div>
         <div class="background-info">
         </div>
-        <div id="staff">
+        <div id="staff" class="list">
             <h1>STAFF</h1>
             <div class="staff-intro">
 
@@ -126,6 +115,9 @@
                     <button data-remodal-action="close" class="remodal-close"></button>
                     <h1>Remodal</h1>
                     <!-- your content -->
+                    <p class="question">
+                     ①あだ名②部活・サークル③趣味
+                    </p>
                     <div class="member">
                         <img src="staff_pic/ryosuke-01.png" alt="">
                         <p>①涼介<br>②Truss<br>③野球観戦、旅</p>
@@ -138,6 +130,11 @@
                         <img src="staff_pic/tanaharu.png" alt="">
                         <p>①たなはる<br>②ESS<br>③旅行</p>
                     </div>
+                    <div class="member">
+                        <img src="staff_pic/hitomi-01.png" alt="">
+                        <p>ひとみ<br>②なし<br>③映画、音楽</p>
+                    </div>
+
 
                 </div>
 
@@ -156,6 +153,9 @@
                     <button data-remodal-action="close" class="remodal-close"></button>
                     <h1>Remodal</h1>
                     <!-- your content -->
+                    <p class="question">
+                     ①あだ名②部活・サークル③趣味
+                    </p>
 
                     <div class="member">
                         <img src="staff_pic/minori-01.png" alt="">
@@ -188,6 +188,10 @@
                     <button data-remodal-action="close" class="remodal-close"></button>
                     <h1>Remodal</h1>
                     <!-- your content -->
+
+                    <p class="question">
+                     ①あだ名②部活・サークル③趣味
+                    </p>
                     <div class="member">
                         <img src="staff_pic/daito-01.png" alt="">
                         <p>①だいと<br>②ESS<br>③ゲーム、ライブに行く</p>
@@ -209,6 +213,11 @@
                     </div>
 
                     <div class="member">
+                        <img src="staff_pic/kabani-01.png" alt="">
+                        <p>①かばーに<br>②ボナペティート<br>③カラオケ/元町徘徊</p>
+                    </div>
+
+                    <div class="member">
                         <img src="staff_pic/karen-01.png" alt="">
                         <p>①かれん<br>②フィールドホッケー部、TOPSPIN<br>③テニス、音楽、映画</p>
                     </div>
@@ -216,6 +225,11 @@
                     <div class="member">
                         <img src="staff_pic/surane-01.png" alt="">
                         <p>①すらねー<br>②神戸大学応援団総部吹奏楽部<br>③深夜ヒトカラ</p>
+                    </div>
+
+                    <div class="member">
+                        <img src="staff_pic/kana-01.png" alt="">
+                        <p>①かな<br>②101<br>③カラオケ</p>
                     </div>
 
 
@@ -233,10 +247,13 @@
                     <button data-remodal-action="close" class="remodal-close"></button>
                     <h1>Remodal</h1>
                     <!-- your content -->
+                    <p class="question">
+                     ①あだ名②部活・サークル③趣味
+                    </p>
 
                     <div class="member">
                         <img src="staff_pic/tamosan-01.png" alt="">
-                        <p>①たもさん②元GI③食べること、映画、写真</p>
+                        <p>①たもさん<br>②元GI<br>③食べること、映画、写真</p>
                     </div>
 
                     <div class="member">
@@ -246,10 +263,18 @@
 
                     <div class="member">
                         <img src="staff_pic/koni-01.png" alt="">
-                        <p>①こにー②Truss③写真、音楽、映画、どこかへ行く</p>
+                        <p>①こにー<br>②Truss<br>③写真、音楽、映画、どこかへ行く</p>
                     </div>
 
+                    <div class="member">
+                        <img src="staff_pic/yukachan-01.png" alt="">
+                        <p>①ゆうちゃん<br>②体育会フットサル部<br>③カメラ</p>
+                    </div>
 
+                    <div class="member">
+                        <img src="staff_pic/hanachan-01.png" alt="">
+                        <p>①はなちゃん<br>②広告研究会AdTAS<br>③写真・ピアノ</p>
+                    </div>
 
                 </div>
 
@@ -258,7 +283,7 @@
         </div>
         <div class="background-staff">
         </div>
-        <div id="twitter">
+        <div id="twitter" class="list">
             <h1>TWITTER</img></h1>
             <div class="twitter-box">
                 <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=%20%E7%A5%9E%E5%A4%A7%E3%80%80%E5%9B%BD%E6%96%87" data-widget-id="835745564700508160"> 神大　国文に関するツイート</a>
@@ -281,26 +306,7 @@
         <!-- jQuery読み込み -->
         <script src="jquery-3.1.1.min.js"></script>
         <script>
-            // ランダム画像表示のjQuery
-            // $(window).ready(function(){
-            //   var rand = Math.floor(Math.random()*2);
-            //   console.log(rand);
-            //   switch(rand){
-            //     case 0:
-            //       $('#home').css('background-image','url(bgimg01.jpg)');
-            //       console.log($('#home').css('background-image'));
-            //       console.log('test1');
-            //       break;
-            //     case 1:
-            //       $('#home').css('background-image','url(bgimg02.jpg)');
-            //       console.log($('#home').css('background-image'));
-            //       console.log('test2');
-            //       break;
-            //     default:
-            //       $('#home').css('background-image', 'bgimg01.jpg');
-            //       break;
-            //   }
-            // })
+
 
             // ハンバーガメニュー
             $(function() {
@@ -329,9 +335,26 @@
             });
         </script>
 
-        <!-- javascript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.js" type="text/javascript"></script>
         <!-- モーダルウィンドウファイル読み込み -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.js" type="text/javascript"></script>
+
+        <!-- inviewファイル読み込み -->
+        <!--HTML-->
+
+        <script type="text/javascript" src="./jquery.inview.js"></script>
+        <script>
+    $(function() {
+        $('.list-mv').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+            if (isInView) {
+                $(this).stop().addClass('mv');
+                console.log('test1');
+            } else {
+                $(this).stop().removeClass('mv');
+                console.log('test2');
+            }
+        });
+    });
+</script>
 
 </body>
 

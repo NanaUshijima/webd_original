@@ -12,6 +12,20 @@ body {
     margin: 0px;
 }
 
+/*スクロールの動きのCSS*/
+
+
+.list-mv {
+	opacity: 0;
+	transform: translate(0,60px);
+	-webkit-transform: translate(0,60px);
+}
+.mv {
+	opacity: 1.0;
+	transform: translate(0,0);
+	-webkit-transform: translate(0,0);
+}
+
 #home {
     background-repeat: no-repeat;
     background-size: cover;
@@ -113,16 +127,7 @@ body {
 }
 
 
-/*header footer*/
 
-
-/*header, footer {
-    width:100%;
-    z-index:2;
-    position:fixed;
-    background:rgba(255,255,255,.7)}
-footer {/*略/}
-/*header menu*/
 
 header {
     z-index: 4;
@@ -134,13 +139,7 @@ header ul li {
 }
 
 
-/*header ul li::after {
-    content: ' |'
-}
 
-header ul li:last-child::after {
-    content: ''
-}*/
 
 header ul li a {
     color: rgba(240, 236, 112, 1);
@@ -172,32 +171,7 @@ header nav {
 }
 
 
-/*
-header ul {
-    margin: 0
-}
 
-header ul li {
-    display: block;
-    margin: 0;
-    border-bottom: dotted 1px #fff;
-    line-height: 3
-}
-
-header ul li a {
-    display: block
-}
-
-header ul li::after {
-    content: ''
-}
-
-header ul li:last-child {
-    border-bottom: none
-}*/
-
-
-/* Toggle(Button) */
 
 
 /*display:noneだったボタンを display:blockにして表示します*/
@@ -260,7 +234,6 @@ header ul li:last-child {
 
 #about, #info, #staff, #twitter {
     padding: 2% 10%;
-    z-index: -2;
 }
 
 
@@ -288,6 +261,7 @@ h1 {
 #about {
     /*background-color: rgb(31, 48, 137);*/
     background-color: #3d4799;
+    z-index: -4;
 }
 
 .about_content {
@@ -297,7 +271,6 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    ;
 }
 
 #about h1 {
@@ -337,8 +310,8 @@ p.introduction {
 }
 
 #info {
-    /*background-color: rgb(246, 150, 150);*/
     background-color: #d8757d;
+    z-index: -4;
 }
 
 
@@ -441,7 +414,7 @@ p.place span {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  margin-left: 20px;
+  margin-left: 10%;
 }
 
 #info ul li {
@@ -517,6 +490,38 @@ img.human {
 
 .staff-intro p{
   margin: 10px 0;
+}
+
+.remodal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 400px;
+  overflow: scroll;
+
+}
+
+.question {
+  font-size: 10px;
+  text-align: right;
+}
+
+.member {
+  display: inline-block;
+  width: 40%;
+  margin: 4%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.member img {
+  width: 90%;
+}
+
+.member p{
+  text-align: left;
+  font-size: 13px;
 }
 
 .background-staff {
