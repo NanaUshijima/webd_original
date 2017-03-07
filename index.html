@@ -26,26 +26,27 @@
 
 
 <body>
-    <div id="home">
-      <!-- ハンバーガメニュー部分 -->
-        <header>
-            <div id="navToggle">
-                <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+    <!-- ハンバーガメニュー部分 -->
+    <header>
+        <div id="navToggle">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#info">info</a></li>
-                    <li><a href="#staff">staff</a></li>
-                    <li><a href="#twitter">twitter</a></li>
-                </ul>
-            </nav>
-        </header>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#info">info</a></li>
+                <li><a href="#staff">staff</a></li>
+                <li><a href="#twitter">twitter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="home">
+
         <div class="appear home_box">
             <p class="word1 appear">shinori</p>
             <p class="word2 appear">2017.05.20</p>
@@ -113,10 +114,10 @@
                 <div class="remodal" data-remodal-id="ibunka-window">
                     <!-- クローズボタン -->
                     <button data-remodal-action="close" class="remodal-close"></button>
-                    <h1>Remodal</h1>
+                    <!-- <h1>Remodal</h1> -->
                     <!-- your content -->
                     <p class="question">
-                     ①あだ名②部活・サークル③趣味
+                        ①あだ名②部活・サークル③趣味
                     </p>
                     <div class="member">
                         <img src="staff_pic/ryosuke-01.png" alt="">
@@ -151,10 +152,10 @@
                 <div class="remodal" data-remodal-id="tiiki-window">
                     <!-- クローズボタン -->
                     <button data-remodal-action="close" class="remodal-close"></button>
-                    <h1>Remodal</h1>
+                    <!-- <h1>Remodal</h1> -->
                     <!-- your content -->
                     <p class="question">
-                     ①あだ名②部活・サークル③趣味
+                        ①あだ名②部活・サークル③趣味
                     </p>
 
                     <div class="member">
@@ -186,11 +187,11 @@
                 <div class="remodal" data-remodal-id="jyokomyu-window">
                     <!-- クローズボタン -->
                     <button data-remodal-action="close" class="remodal-close"></button>
-                    <h1>Remodal</h1>
+                    <!-- <h1>Remodal</h1> -->
                     <!-- your content -->
 
                     <p class="question">
-                     ①あだ名②部活・サークル③趣味
+                        ①あだ名②部活・サークル③趣味
                     </p>
                     <div class="member">
                         <img src="staff_pic/daito-01.png" alt="">
@@ -245,10 +246,10 @@
                 <div class="remodal" data-remodal-id="gendai-window">
                     <!-- クローズボタン -->
                     <button data-remodal-action="close" class="remodal-close"></button>
-                    <h1>Remodal</h1>
+
                     <!-- your content -->
                     <p class="question">
-                     ①あだ名②部活・サークル③趣味
+                        ①あだ名②部活・サークル③趣味
                     </p>
 
                     <div class="member">
@@ -306,8 +307,6 @@
         <!-- jQuery読み込み -->
         <script src="jquery-3.1.1.min.js"></script>
         <script>
-
-
             // ハンバーガメニュー
             $(function() {
                 $('#navToggle').click(function() { //headerに .openNav を付加・削除
@@ -343,16 +342,16 @@
 
         <script type="text/javascript" src="./jquery.inview.js"></script>
         <script>
-    $(function() {
-        $('.list-mv').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
-            if (isInView) {
-                $(this).stop().addClass('mv');
-            } else {
-                $(this).stop().removeClass('mv');
-            }
-        });
-    });
-</script>
+            $(function() {
+                $('.list-mv').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+                    if (isInView) {
+                        $(this).stop().addClass('mv');
+                    } else {
+                        $(this).stop().removeClass('mv');
+                    }
+                });
+            });
+        </script>
 
 </body>
 
